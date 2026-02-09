@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Light theme – logo-aligned but suitable for white UI */
+  --bg: #f3f4f6;
+  /* Light shell background (muted gray, not pure white) */
+  --sidebar-bg: #e5e7eb;
+  /* Sidebar / secondary panels */
+  --card-bg: #ffffff;
+  /* Cards & content surfaces */
+  --text: #020617;
+  /* Primary text (deep navy) */
+  --text-muted: #4b5563;
+  /* Secondary text */
+  --border: rgba(15, 23, 42, 0.08);
+  /* Soft borders */
+  --hover: #e5e7eb;
+  /* Hover for interactive surfaces */
+  --accent: #3b82f6;
+  /* Blue accent */
+}
+
+html.dark {
+  /* Dark theme – institutional, primary experience */
+  --bg: #020617;
+  /* Deep navy / charcoal */
+  --sidebar-bg: #0f172a;
+  /* Slightly lighter for sidebar contrast */
+  --card-bg: #1e293b;
+  /* Lighter surface for cards to stand out */
+  --text: #f9fafb;
+  /* Off-white text (not pure white) */
+  --text-muted: #9ca3af;
+  --border: rgba(148, 163, 184, 0.12);
+  /* Slightly more visible borders */
+  --hover: #334155;
+  /* Hover state for better visibility */
+  --accent: #60a5fa;
+  /* Brighter blue in dark mode */
+}
+
+html {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  /* Mobile responsiveness: ensure html takes full width and prevents horizontal overflow */
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  /* Prevent text size adjustment on iOS */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  /* font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+             "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+  background-color: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+  /* Mobile responsiveness: ensure body takes full width and prevents horizontal overflow */
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  /* Prevent text size adjustment on iOS */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Mobile responsiveness: ensure root container adapts to viewport */
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(15, 23, 42, 0.1);
+  border-radius: 10px;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(241, 245, 249, 0.1);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(15, 23, 42, 0.2);
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(241, 245, 249, 0.2);
+}
+
+/* Hide scrollbar but keep functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari and Opera */
+}
+
+/* Panel slide-down animation */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile-specific fixes */
+@media (max-width: 640px) {
+
+  /* Ensure all containers respect mobile viewport */
+  * {
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+
+  /* Prevent horizontal scrolling on mobile */
+  body,
+  html,
+  #root {
+    overflow-x: hidden !important;
+    position: relative;
+  }
+
+  /* Fix for iOS Safari viewport issues */
+  @supports (-webkit-touch-callout: none) {
+    html {
+      height: -webkit-fill-available;
+    }
+
+    body {
+      min-height: -webkit-fill-available;
+    }
+  }
+}
