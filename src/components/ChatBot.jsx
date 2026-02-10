@@ -336,19 +336,7 @@ function ChatBot() {
     location: "Mumbai"
   };
 
-  // Secondary testimonials (supporting reviews)
-  const secondaryTestimonials = [
-    {
-      quote: "As an independent analyst, I use SageAlpha to quickly generate research reports. It saves me hours of manual work.",
-      author: "Independent Analyst",
-      location: "Delhi"
-    },
-    {
-      quote: "The AI-powered insights are impressive. I can now make informed investment decisions much faster.",
-      author: "Individual Investor",
-      location: "Bangalore"
-    }
-  ];
+
 
   return (
     <div className="min-h-screen bg-[var(--bg)] text-[var(--text)]">

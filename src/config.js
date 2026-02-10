@@ -11,10 +11,10 @@
 // const API_BASE_URL = "https://threadlike-nondemocratically-jurnee.ngrok-free.dev";
 
 // render.com backend URL
-// const API_BASE_URL = "https://sagealpha-backend-render.onrender.com";
+const API_BASE_URL = "https://sagealpha-backend-render.onrender.com";
 
 
-const API_BASE_URL = "http://localhost:8000";
+// const API_BASE_URL = "http://localhost:8000";
 
 
 const CONFIG = {
