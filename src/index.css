@@ -134,6 +134,53 @@ body {
   }
 }
 
+/* Marquee animations for hero tickers */
+@keyframes marquee-slow {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-medium {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Animation utility classes with responsive speeds */
+.animate-marquee-slow {
+  animation: marquee-slow 25s linear infinite;
+}
+
+.animate-marquee-medium {
+  animation: marquee-medium 20s linear infinite;
+}
+
+/* Slower on larger screens for subtle effect */
+@media (min-width: 640px) {
+  .animate-marquee-slow {
+    animation: marquee-slow 40s linear infinite;
+  }
+  
+  .animate-marquee-medium {
+    animation: marquee-medium 32s linear infinite;
+  }
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee-slow,
+  .animate-marquee-medium {
+    animation: none;
+  }
+}
+
 /* Mobile-specific fixes */
 @media (max-width: 640px) {
 

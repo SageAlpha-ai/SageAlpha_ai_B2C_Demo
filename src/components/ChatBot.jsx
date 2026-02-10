@@ -358,9 +358,9 @@ function ChatBot() {
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-[var(--text)] mb-4 sm:mb-6">
             Confused about which stock to buy?
           </h1>
-          <p className="text-base sm:text-lg md:text-xl text-[var(--text-muted)] mb-8 sm:mb-10 max-w-2xl mx-auto leading-relaxed">
+          {/* <p className="text-base sm:text-lg md:text-xl text-[var(--text-muted)] mb-8 sm:mb-10 max-w-2xl mx-auto leading-relaxed">
             Enter any stock ticker and receive a AI-powered equity research report 
-          </p>
+          </p> */}
 
           {/* Primary CTA */}
           <form onSubmit={handleGenerateReport} className="max-w-2xl mx-auto">
@@ -396,15 +396,15 @@ function ChatBot() {
             </div>
 
             {/* Usage Counter */}
-            <div className="mt-4 flex items-center justify-center gap-2">
+            {/* <div className="mt-4 flex items-center justify-center gap-2">
               <span className={`text-xs sm:text-sm font-medium ${usageCount >= 5 ? 'text-red-500' : usageCount >= 4 ? 'text-orange-500' : 'text-[var(--text-muted)]'}`}>
                 Uses: {usageCount} / 5
               </span>
-            </div>
+            </div> */}
 
             {/* Usage Limit Message */}
             {isUsageLimitReached && (
-              <div className="mt-4 max-w-md mx-auto">
+              <div className="mt-8 max-w-md mx-auto">
                 <div className="bg-red-500/10 border border-red-500/20 rounded-xl p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
                   <p className="text-sm text-red-600 font-medium flex-1">
                     You've reached the free usage limit. Upgrade to continue.
@@ -419,6 +419,115 @@ function ChatBot() {
               </div>
             )}
           </form>
+        </div>
+      </section>
+
+      {/* Live Success Ticker - Foreground */}
+      <section className="py-6 sm:py-8 bg-[var(--card-bg)] border-y border-[var(--border)] overflow-hidden">
+        <div className="w-full">
+          {/* Success Ticker */}
+          <div className="mb-3">
+            <div className="flex whitespace-nowrap animate-marquee-slow">
+              {/* First set */}
+              <div className="flex items-center gap-8 sm:gap-12 px-4 text-sm sm:text-base font-medium text-[var(--text)]">
+                <span className="flex items-center gap-2">
+                  <svg className="w-4 h-4 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  AAPL analyzed in 2 mins • Revenue ↑ 12%
+                </span>
+                <span className="flex items-center gap-2">
+                  <svg className="w-4 h-4 text-blue-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
+                  </svg>
+                  INFY: Strong fundamentals detected
+                </span>
+                <span className="flex items-center gap-2">
+                  <svg className="w-4 h-4 text-orange-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+                  </svg>
+                  TCS: Margin pressure flagged early
+                </span>
+                <span className="flex items-center gap-2">
+                  <svg className="w-4 h-4 text-purple-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  MSFT: AI-driven moat identified
+                </span>
+                <span className="flex items-center gap-2">
+                  <svg className="w-4 h-4 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z" clipRule="evenodd" />
+                  </svg>
+                  RELIANCE: Cash flow strength improving
+                </span>
+              </div>
+              {/* Duplicate for seamless loop */}
+              <div className="flex items-center gap-8 sm:gap-12 px-4 text-sm sm:text-base font-medium text-[var(--text)]" aria-hidden="true">
+                <span className="flex items-center gap-2">
+                  <svg className="w-4 h-4 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  AAPL analyzed in 2 mins • Revenue ↑ 12%
+                </span>
+                <span className="flex items-center gap-2">
+                  <svg className="w-4 h-4 text-blue-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
+                  </svg>
+                  INFY: Strong fundamentals detected
+                </span>
+                <span className="flex items-center gap-2">
+                  <svg className="w-4 h-4 text-orange-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+                  </svg>
+                  TCS: Margin pressure flagged early
+                </span>
+                <span className="flex items-center gap-2">
+                  <svg className="w-4 h-4 text-purple-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  MSFT: AI-driven moat identified
+                </span>
+                <span className="flex items-center gap-2">
+                  <svg className="w-4 h-4 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z" clipRule="evenodd" />
+                  </svg>
+                  RELIANCE: Cash flow strength improving
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Stock Ticker Tape */}
+          <div className="opacity-80">
+            <div className="flex whitespace-nowrap animate-marquee-medium">
+              {/* First set */}
+              <div className="flex items-center gap-6 sm:gap-10 px-4 text-xs sm:text-sm font-mono">
+                <span className="text-green-600 font-semibold">AAPL +2.1%</span>
+                <span className="text-red-600 font-semibold">TSLA -1.3%</span>
+                <span className="text-green-600 font-semibold">INFY +0.9%</span>
+                <span className="text-green-600 font-semibold">TCS +1.4%</span>
+                <span className="text-green-600 font-semibold">MSFT +1.8%</span>
+                <span className="text-red-600 font-semibold">GOOGL -0.4%</span>
+                <span className="text-green-600 font-semibold">RELIANCE +2.3%</span>
+                <span className="text-green-600 font-semibold">HDFC +1.1%</span>
+                <span className="text-green-600 font-semibold">ITC +0.7%</span>
+                <span className="text-red-600 font-semibold">META -0.8%</span>
+              </div>
+              {/* Duplicate for seamless loop */}
+              <div className="flex items-center gap-6 sm:gap-10 px-4 text-xs sm:text-sm font-mono" aria-hidden="true">
+                <span className="text-green-600 font-semibold">AAPL +2.1%</span>
+                <span className="text-red-600 font-semibold">TSLA -1.3%</span>
+                <span className="text-green-600 font-semibold">INFY +0.9%</span>
+                <span className="text-green-600 font-semibold">TCS +1.4%</span>
+                <span className="text-green-600 font-semibold">MSFT +1.8%</span>
+                <span className="text-red-600 font-semibold">GOOGL -0.4%</span>
+                <span className="text-green-600 font-semibold">RELIANCE +2.3%</span>
+                <span className="text-green-600 font-semibold">HDFC +1.1%</span>
+                <span className="text-green-600 font-semibold">ITC +0.7%</span>
+                <span className="text-red-600 font-semibold">META -0.8%</span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
