@@ -443,91 +443,122 @@ function ChatBot() {
         </section>
       )}
 
-      {/* Why Investors Choose SageAlpha - Narrative Flow Section */}
-      <section className="py-12 sm:py-16 px-4 sm:px-6 bg-[var(--card-bg)]">
-        <div className="max-w-3xl mx-auto">
+      {/* Why Investors Choose SageAlpha - Premium Feature Cards */}
+      <section className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-b from-[var(--bg)] to-[var(--card-bg)]">
+        <div className="max-w-6xl mx-auto">
           {/* Section Header */}
-          <div className="mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-[var(--text)] mb-3">
-              Why investors choose SageAlpha
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[var(--text)] mb-4 tracking-tight">
+              Why SageAlpha
             </h2>
-            <p className="text-base sm:text-lg text-[var(--text-muted)]">
+            {/* <p className="text-lg sm:text-xl text-[var(--text-muted)] font-light max-w-2xl mx-auto">
               Because understanding a company shouldn't be complicated.
-            </p>
+            </p> */}
           </div>
 
-          {/* Narrative Flow Items */}
-          <div className="space-y-10 sm:space-y-12">
-            {/* Narrative Item 1 */}
-            <div className="flex flex-col gap-4">
-              <div className="flex items-start gap-3">
-                <div className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[var(--text-muted)] mt-2.5"></div>
-                <p className="text-base sm:text-lg text-[var(--text-muted)] leading-relaxed">
-                  Financial reports contain complex financial jargon.
-                </p>
-              </div>
-              <div className="flex items-center gap-3 pl-6">
-                <div className="text-[var(--accent)] text-lg sm:text-xl">→</div>
-                <p className="text-base sm:text-lg md:text-xl text-[var(--text)] font-medium leading-relaxed">
-                  We translate company data into clear investor insights.
-                </p>
-              </div>
-            </div>
-
-            {/* Separator */}
-            <div className="border-t border-[var(--border)] opacity-50"></div>
-
-            {/* Narrative Item 2 */}
-            <div className="flex flex-col gap-4">
-              <div className="flex items-start gap-3">
-                <div className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[var(--text-muted)] mt-2.5"></div>
-                <p className="text-base sm:text-lg text-[var(--text-muted)] leading-relaxed">
-                  Most platforms give opinions, not real analysis.
-                </p>
-              </div>
-              <div className="flex items-center gap-3 pl-6">
-                <div className="text-[var(--accent)] text-lg sm:text-xl">→</div>
-                <p className="text-base sm:text-lg md:text-xl text-[var(--text)] font-medium leading-relaxed">
-                  SageAlpha delivers research-style insights backed by fundamentals.
-                </p>
+          {/* Feature Cards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+            {/* Card 1: Clear Insights */}
+            <div className="group relative bg-[var(--bg)] rounded-2xl p-6 sm:p-8 border border-[var(--border)] hover:border-[var(--accent)]/40 shadow-sm hover:shadow-lg transition-all duration-200 hover:-translate-y-1">
+              {/* Accent line */}
+              <div className="absolute left-0 top-8 bottom-8 w-1 bg-gradient-to-b from-[var(--accent)]/0 via-[var(--accent)] to-[var(--accent)]/0 rounded-full"></div>
+              
+              <div className="flex items-start gap-4">
+                {/* Icon */}
+                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-[var(--accent)]/10 flex items-center justify-center group-hover:bg-[var(--accent)]/20 transition-colors duration-200">
+                  <IoDocumentText className="w-6 h-6 text-[var(--accent)]" />
+                </div>
+                
+                {/* Content */}
+                <div className="flex-1">
+                  <h3 className="text-lg sm:text-xl font-semibold text-[var(--text)] mb-2">
+                  Research-style insights
+                  </h3>
+                  <p className="text-sm sm:text-base text-[var(--text-muted)] leading-relaxed mb-3">
+                    Financial reports contain complex jargon.
+                  </p>
+                  <p className="text-sm sm:text-base text-[var(--text)] font-medium leading-relaxed">
+                  SageAlpha provides research-based insights, backed by fundamentals.
+                  </p>
+                </div>
               </div>
             </div>
 
-            {/* Separator */}
-            <div className="border-t border-[var(--border)] opacity-50"></div>
-
-            {/* Narrative Item 3 */}
-            <div className="flex flex-col gap-4">
-              <div className="flex items-start gap-3">
-                <div className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[var(--text-muted)] mt-2.5"></div>
-                <p className="text-base sm:text-lg text-[var(--text-muted)] leading-relaxed">
-                  The tools are built for traders, not long-term investors.
-                </p>
-              </div>
-              <div className="flex items-center gap-3 pl-6">
-                <div className="text-[var(--accent)] text-lg sm:text-xl">→</div>
-                <p className="text-base sm:text-lg md:text-xl text-[var(--text)] font-medium leading-relaxed">
-                  Our reports are for real investors making thoughtful decisions.
-                </p>
+            {/* Card 2: Research-Grade Analysis */}
+            <div className="group relative bg-[var(--bg)] rounded-2xl p-6 sm:p-8 border border-[var(--border)] hover:border-[var(--accent)]/40 shadow-sm hover:shadow-lg transition-all duration-200 hover:-translate-y-1">
+              {/* Accent line */}
+              <div className="absolute left-0 top-8 bottom-8 w-1 bg-gradient-to-b from-[var(--accent)]/0 via-[var(--accent)] to-[var(--accent)]/0 rounded-full"></div>
+              
+              <div className="flex items-start gap-4">
+                {/* Icon */}
+                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-[var(--accent)]/10 flex items-center justify-center group-hover:bg-[var(--accent)]/20 transition-colors duration-200">
+                  <IoTrendingUp className="w-6 h-6 text-[var(--accent)]" />
+                </div>
+                
+                {/* Content */}
+                <div className="flex-1">
+                  <h3 className="text-lg sm:text-xl font-semibold text-[var(--text)] mb-2">
+                    Research-style insights
+                  </h3>
+                  <p className="text-sm sm:text-base text-[var(--text-muted)] leading-relaxed mb-3">
+                    Most platforms give opinions, not real analysis.
+                  </p>
+                  <p className="text-sm sm:text-base text-[var(--text)] font-medium leading-relaxed">
+                    SageAlpha delivers research-grade insights backed by fundamentals.
+                  </p>
+                </div>
               </div>
             </div>
 
-            {/* Separator */}
-            <div className="border-t border-[var(--border)] opacity-50"></div>
-
-            {/* Narrative Item 4 */}
-            <div className="flex flex-col gap-4">
-              <div className="flex items-start gap-3">
-                <div className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[var(--text-muted)] mt-2.5"></div>
-                <p className="text-base sm:text-lg text-[var(--text-muted)] leading-relaxed">
-                  Research takes hours — sometimes days.
-                </p>
+            {/* Card 3: Built for Real Investors */}
+            <div className="group relative bg-[var(--bg)] rounded-2xl p-6 sm:p-8 border border-[var(--border)] hover:border-[var(--accent)]/40 shadow-sm hover:shadow-lg transition-all duration-200 hover:-translate-y-1">
+              {/* Accent line */}
+              <div className="absolute left-0 top-8 bottom-8 w-1 bg-gradient-to-b from-[var(--accent)]/0 via-[var(--accent)] to-[var(--accent)]/0 rounded-full"></div>
+              
+              <div className="flex items-start gap-4">
+                {/* Icon */}
+                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-[var(--accent)]/10 flex items-center justify-center group-hover:bg-[var(--accent)]/20 transition-colors duration-200">
+                  <IoShieldCheckmark className="w-6 h-6 text-[var(--accent)]" />
+                </div>
+                
+                {/* Content */}
+                <div className="flex-1">
+                  <h3 className="text-lg sm:text-xl font-semibold text-[var(--text)] mb-2">
+                    Built for real investors
+                  </h3>
+                  <p className="text-sm sm:text-base text-[var(--text-muted)] leading-relaxed mb-3">
+                    The tools are built for traders, not long-term investors.
+                  </p>
+                  <p className="text-sm sm:text-base text-[var(--text)] font-medium leading-relaxed">
+                  Our reports are intended for real investors making real decisions.  Research can take hours, even days. 
+                  </p>
+                </div>
               </div>
-              <div className="flex items-center gap-3 pl-6">
-                <div className="text-[var(--accent)] text-lg sm:text-xl">→</div>
-                <p className="text-base sm:text-lg md:text-xl text-[var(--text)] font-medium leading-relaxed">
-                  Get a full equity picture in minutes with AI-powered analysis.
-                </p>
+            </div>
+
+            {/* Card 4: AI-Powered Speed */}
+            <div className="group relative bg-[var(--bg)] rounded-2xl p-6 sm:p-8 border border-[var(--border)] hover:border-[var(--accent)]/40 shadow-sm hover:shadow-lg transition-all duration-200 hover:-translate-y-1">
+              {/* Accent line */}
+              <div className="absolute left-0 top-8 bottom-8 w-1 bg-gradient-to-b from-[var(--accent)]/0 via-[var(--accent)] to-[var(--accent)]/0 rounded-full"></div>
+              
+              <div className="flex items-start gap-4">
+                {/* Icon */}
+                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-[var(--accent)]/10 flex items-center justify-center group-hover:bg-[var(--accent)]/20 transition-colors duration-200">
+                  <IoSparkles className="w-6 h-6 text-[var(--accent)]" />
+                </div>
+                
+                {/* Content */}
+                <div className="flex-1">
+                  <h3 className="text-lg sm:text-xl font-semibold text-[var(--text)] mb-2">
+                    AI-powered analysis
+                  </h3>
+                  <p className="text-sm sm:text-base text-[var(--text-muted)] leading-relaxed mb-3">
+                    Research takes hours — sometimes days.
+                  </p>
+                  <p className="text-sm sm:text-base text-[var(--text)] font-medium leading-relaxed">
+                    Get a full equity picture in minutes with AI-powered analysis.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -540,7 +571,7 @@ function ChatBot() {
           {/* Section Header */}
           <div className="text-center mb-10 sm:mb-12">
             <h2 className="text-2xl sm:text-3xl font-black text-[var(--text)] mb-3">
-              Trusted by investors and analysts
+              Trusted by investors
             </h2>
             {/* <p className="text-sm sm:text-base text-[var(--text-muted)]">
               Real experiences from people using SageAlpha
@@ -585,25 +616,83 @@ function ChatBot() {
               </div>
             </div>
           </div>
-
-          {/* Secondary Reviews (Supporting) */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-            {secondaryTestimonials.map((testimonial, idx) => (
-              <div key={idx} className="bg-[var(--bg)] rounded-xl p-5 sm:p-6 border border-[var(--border)] shadow-sm">
-                <p className="text-sm sm:text-base text-[var(--text)] mb-4 leading-relaxed">
-                  "{testimonial.quote}"
-                </p>
-                <div className="pt-4 border-t border-[var(--border)]">
-                  <p className="font-semibold text-sm text-[var(--text)]">
-                    {testimonial.author}
-                  </p>
-                  <p className="text-xs text-[var(--text-muted)] mt-1">
-                    {testimonial.location}
-                  </p>
-                </div>
+          <div className="mb-8 sm:mb-10">
+            <div className="bg-[var(--bg)] rounded-2xl p-6 sm:p-8 border-2 border-[var(--accent)]/30 shadow-lg relative overflow-hidden">
+              {/* Accent gradient overlay */}
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[var(--accent)]/50 to-[var(--accent)]"></div>
+              
+              {/* Quotation mark icon */}
+              <div className="absolute top-4 right-4 sm:top-6 sm:right-6 opacity-10">
+                <svg className="w-16 h-16 sm:w-20 sm:h-20 text-[var(--accent)]" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.996 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.984zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                </svg>
               </div>
-            ))}
+
+              {/* Star rating indicator */}
+              <div className="flex items-center gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} className="w-4 h-4 sm:w-5 sm:h-5 text-[var(--accent)]" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+
+              {/* Quote */}
+              <p className="text-base sm:text-lg md:text-xl text-[var(--text)] mb-6 leading-relaxed relative z-10 font-medium">
+                "{featuredTestimonial.quote}"
+              </p>
+
+              {/* User info */}
+              <div className="pt-4 border-t border-[var(--border)] relative z-10">
+                <p className="font-semibold text-sm sm:text-base text-[var(--text)]">
+                  {featuredTestimonial.author}
+                </p>
+                <p className="text-xs sm:text-sm text-[var(--text-muted)] mt-1">
+                  {featuredTestimonial.location}
+                </p>
+              </div>
+            </div>
           </div>
+          <div className="mb-8 sm:mb-10">
+            <div className="bg-[var(--bg)] rounded-2xl p-6 sm:p-8 border-2 border-[var(--accent)]/30 shadow-lg relative overflow-hidden">
+              {/* Accent gradient overlay */}
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[var(--accent)]/50 to-[var(--accent)]"></div>
+              
+              {/* Quotation mark icon */}
+              <div className="absolute top-4 right-4 sm:top-6 sm:right-6 opacity-10">
+                <svg className="w-16 h-16 sm:w-20 sm:h-20 text-[var(--accent)]" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.996 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.984zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                </svg>
+              </div>
+
+              {/* Star rating indicator */}
+              <div className="flex items-center gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} className="w-4 h-4 sm:w-5 sm:h-5 text-[var(--accent)]" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+
+              {/* Quote */}
+              <p className="text-base sm:text-lg md:text-xl text-[var(--text)] mb-6 leading-relaxed relative z-10 font-medium">
+                "{featuredTestimonial.quote}"
+              </p>
+
+              {/* User info */}
+              <div className="pt-4 border-t border-[var(--border)] relative z-10">
+                <p className="font-semibold text-sm sm:text-base text-[var(--text)]">
+                  {featuredTestimonial.author}
+                </p>
+                <p className="text-xs sm:text-sm text-[var(--text-muted)] mt-1">
+                  {featuredTestimonial.location}
+                </p>
+              </div>
+            </div>
+          </div>
+
+         
+        
         </div>
       </section>
 
